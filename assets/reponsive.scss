@@ -1,0 +1,179 @@
+@media (max-width: 739px) {
+    .header_nav_bar {
+        height: 60px;
+        width: 100%;
+        display: flex;
+        .btn-menu-mobile {
+            font-size: 28px;
+            margin-left: 8px;
+            left: 0;
+            position: absolute;
+        }
+
+        .nav-overlay {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba($color: #000000, $alpha: 0.3);
+            display: none;
+            animation: fadein linear 0.2s;
+        }
+        .wrap_menu_bar_mobile {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 320px;
+            max-width: 100%;
+            background: #fff;
+            opacity: 0;
+            transform: translateX(-100%);
+            transition: transform linear 0.2s, opacity linear 0.2s;
+            .nav_mobile_close {
+                i {
+                    font-size: 36px;
+                    position: absolute;
+                    color: #666;
+                    top: 1rem;
+                    right: 1rem;
+                }
+            }
+            .menu_content_list_mobile {
+                margin-top: 20px;
+                .menu_item_mobile {
+                    .menu_link_mobile {
+                        text-decoration: none;
+                        color: #333;
+                        display: block;
+                        padding: 8px 0;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        .header_nav_content {
+            width: 100%;
+            height: 60px;
+            width: 100%;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-around;
+            .nav_input {
+                display: none;
+            }
+            .nav_input:checked ~ .nav-overlay {
+                display: block;
+            }
+            .nav_input:checked ~ .wrap_menu_bar_mobile {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            .wrap_logo {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                .img_logo {
+                    width: 100%;
+                    height: inherit;
+                    // padding: 5px 0;
+                    display: none;
+                }
+            }
+            .wrap_menu_bar_desktop {
+                display: none;
+                .menu_content_list {
+                }
+            }
+        }
+    }
+    .slider_panel {
+        margin-top: 60px;
+        .slide-img {
+            .swiper .swiper-wrapper {
+                .swiper-slide {
+                    a {
+                        img {
+                            min-height: 200px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .service-about {
+        background: #fff;
+        .container-services-about {
+            margin-bottom: 0;
+            .title-container {
+                padding: 24px;
+            }
+        }
+        .container-services {
+            padding: 40px;
+            margin-bottom: 40px;
+            background: #ccc;
+            border-radius: 4px;
+        }
+    }
+    .container-info-partner {
+        display: none;
+    }
+    #footer {
+        width: 100%;
+    }
+    .img-form-registry {
+        img {
+            display: none;
+        }
+    }
+    .session_about_us_content {
+        padding: 24px 24px 80px;
+    }
+    .session_about_us_content {
+        .about_us_content {
+            .content_left_about {
+                padding: 0;
+            }
+        }
+    }
+
+    .session_about_us_content {
+        .about_us_content {
+            .content_right_about {
+                .header_right_about {
+                    font-size: 26px;
+                    line-height: 50px;
+                }
+            }
+        }
+    }
+    .container-form-registry {
+        padding: 0;
+    }
+    .contact-btn {
+        display: none;
+    }
+
+    @keyframes fadein {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+}
+@media (min-width: 1023px) {
+    .wrap_menu_bar_mobile {
+        display: none;
+    }
+    .btn-menu-mobile {
+        display: none;
+    }
+    .nav_input {
+        display: none;
+    }
+}
